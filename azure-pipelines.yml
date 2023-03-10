@@ -1,7 +1,8 @@
 trigger:
 - main
+- feture/*
 
-strategy:
+<!-- strategy:
   matrix:
     jdk10_linux:
       imageName: "ubuntu-latest"
@@ -9,10 +10,11 @@ strategy:
     jdk11_windows:
       imageName: "windows-latest"
       jdkVersion: "1.11"
-  maxParallel: 2
+  maxParallel: 2 --> 
 
 pool:
-  vmImage: $(imageName)
+  #vmImage: $(imageName)
+  vmImage: "ubuntu-latest"
 
 steps:
 - task: Maven@4
